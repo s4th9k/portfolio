@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 0, 0);
+            color: #c9d1d9;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #161b22;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navlinks {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navlinks li a {
+            text-decoration: none;
+            color: #f4f4f4;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .navlinks li a:hover {
+            color: #ffd83e;
+        }
+
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #ffcb0e;
+            animation: fadeIn 1.5s;
+        }
+
+        .typing-container {
+            font-size: 1.3rem;
+            color: #efefec;
+            font-weight: 300;
+            min-height: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .projects-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Make the boxes flexible */
+    gap: 35px; /* Space between the boxes */
+    justify-items: center;
+    margin-top: 30px;
+    padding: 0 5%; /* Padding for the left and right sides */
+}
+
+.project-box {
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(88, 166, 255, 0.3);
+        }
+
+        .project-box h3 {
+            font-size: 1.5rem;
+            color: #e6a729;
+            margin-bottom: 8px;
+        }
+
+        .project-box p {
+            font-size: 1rem;
+            color: #c9d1d9;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="heading">My Projects</h1>
+        <div class="typing-container" id="typing-text"></div>
+
+        <div class="projects-boxes">
+            <div class="project-box">
+                <h3>AI Crime Classification</h3>
+                <p>An AI-driven system that classifies different types of cybercrime, helping law enforcement agencies detect threats efficiently.</p>
+            </div>
+            <div class="project-box">
+                <h3>Web Security Scanner</h3>
+                <p>A powerful automated tool designed to scan web applications for vulnerabilities, including SQL injection, XSS, and misconfigurations.</p>
+            </div>
+            <div class="project-box">
+                <h3>Secure AI Chatbots</h3>
+                <p>Developing AI chatbots with advanced security mechanisms to prevent prompt injections and unauthorized access.</p>
+            </div>
+            <div class="project-box">
+                <h3>Threat Intelligence System</h3>
+                <p>A real-time monitoring system that detects and analyzes emerging cyber threats, providing actionable insights for enterprises.</p>
+            </div>
+            <div class="project-box">
+                <h3>Penetration Testing Toolkit</h3>
+                <p>A toolkit equipped with automated scanning, payload injection, and security testing features to assist ethical hackers.</p>
+            </div>
+            <div class="project-box">
+                <h3>LLM Security Framework</h3>
+                <p>Developing a security framework to safeguard large language models (LLMs) from adversarial attacks and bias exploitation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const thoughts = [
+            "Turning ideas into reality...",
+            "Innovation drives success!",
+            "Code. Create. Secure.",
+            "Every project is a step forward!"
+        ];
+        let index = 0;
+        function typeText() {
+            let text = thoughts[index];
+            let i = 0;
+            document.getElementById("typing-text").innerHTML = "";
+            function typing() {
+                if (i < text.length) {
+                    document.getElementById("typing-text").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, 100);
+                } else {
+                    setTimeout(() => {
+                        index = (index + 1) % thoughts.length;
+                        typeText();
+                    }, 2000);
+                }
+            }
+            typing();
+        }
+        typeText();
+    </script>
+</body>
+</html>
