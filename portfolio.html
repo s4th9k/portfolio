@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- Header with Navigation Bar -->
+<header>
+    <nav>
+        <div class="togglebtn" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navlinks" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- JavaScript for Navigation Toggle -->
+<script>
+    function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+    }
+</script>
+
+<!-- CSS for Responsive Navigation -->
+<style>
+    header {
+        background: #090909;
+        padding: 50px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navlinks {
+        list-style: none;
+        display: flex;
+        gap: -5px;
+    }
+
+    .navlinks li {
+        display: inline;
+    }
+
+    .navlinks a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .togglebtn {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .togglebtn span {
+        width: 30px;
+        height: 3px;
+        background: white;
+    }
+
+    @media (max-width: 768px) {
+        .navlinks {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 250px;
+            height: 100vh;
+            background: #000000;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+        }
+
+        .navlinks.active {
+            left: 0;
+        }
+
+        .togglebtn {
+            display: flex;
+        }
+    }
+</style>
+
+
+    <div class="centered-container">
+        <h1 class="intro">Hi, I am <span>Sarthak</span></h1>
+        <h2 class="profession">Bug Hunter & Security Researcher</h2>
+        <p class="achievement">Achievements: <strong>50+ Bugs Reported, Including Critical Vulnerabilities</strong></p>
+        <div class="images">
+            <div class="image">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGYf_N5NRMStg/feedshare-shrink_800/feedshare-shrink_800/0/1732084102388?e=1743033600&v=beta&t=FMZl2rKGZf8tQ34DTSqLuEHdhEI8bKfG3LUgA_y-aSw" alt="Bounty Reward" class="img-responsive">
+                <p>Bounty Reward</p>
+            </div>
+            <div class="image">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQGphEMZj8Oqwg/feedshare-shrink_1280/B56ZSEo48FHoAs-/0/1737392100576?e=1743033600&v=beta&t=p1A-w8C-GdoCVOos77_4d2Hc2aMi_hZgL6-oBRvJBy4" alt="Bug Hunting SWAG" class="img-responsive">
+                <p>Bug Hunting</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle navigation for mobile view
+        function toggleNav() {
+            const navLinks = document.querySelector('.navlinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
