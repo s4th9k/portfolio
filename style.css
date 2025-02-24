@@ -1,0 +1,640 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background: #000000;
+}
+
+/* Hero Section */
+.hero-header {
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Navigation */
+nav {
+    position: relative;
+}
+
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 15px;
+    right: 2%;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #007ced;
+    margin: 6px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+nav .navlinks {
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+
+/* Hero Section Content */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.container .hero-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.hero-text h5 {
+    color: #fff4f4;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.hero-text h5 span {
+    color: #007ced;
+    font-size: 16px;
+}
+
+.hero-text h1 {
+    color: #007ced;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: #e5e5e5;
+}
+
+/* Buttons */
+.btn-group {
+    margin: 45px 0;
+}
+
+.btn-group .btn {
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-group .btn:hover {
+    background-color: #007ced;
+    border-color: #007ced;
+    color: #fff;
+}
+
+.btn.active {
+    border-color: #007ced;
+}
+
+/* Social Icons */
+.hero-text .social i {
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.hero-text .social i:hover {
+    color: #007ced;
+    transform: rotate(360deg);
+}
+
+/* Responsive Design */
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: block;
+    }
+
+    /* Toggle button animation */
+    .click {
+        top: 15px;
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 5;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s ease-in-out;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    nav .navlinks li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    nav .navlinks li a {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    nav .navlinks.open {
+        right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding: 40px 0px;
+        align-items: center;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group .btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 500px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-pic {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/* Reset default styles */
+/* Centered container */
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Padding for mobile responsiveness */
+}
+
+/* Heading */
+.intro {
+    font-size: 3rem;
+    color: #ffffff;
+    animation: slideIn 2s ease-out;
+}
+
+.intro span {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.profession {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeInUp 2s 1.5s forwards;
+}
+
+.achievement {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 2s 2s forwards;
+}
+
+.achievement strong {
+    font-weight: bold;
+}
+
+/* Images section */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeInUp 2s 3s forwards;
+}
+
+.image {
+    text-align: center;
+}
+
+.img-responsive {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img-responsive:hover {
+    transform: scale(1.1);
+}
+
+.image p {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Key animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/* Body settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Set background to black */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Container to hold sections */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    gap: 40px; /
+}
+
+/* Flexbox container for About Me and Education */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 600px; /* Added gap between the columns */
+    flex-wrap: wrap; /* Ensure sections stack on smaller screens */
+    margin-bottom: 200px; /* Space after the columns */
+}
+
+/* Section styling */
+section {
+    border-radius: 10px;
+    padding: 30px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+    width: 48%; /* Each section takes up 48% width */
+    margin-bottom: 30px; /* Gap between the sections */
+}
+
+/* Section Heading Styling */
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Section Text Styling */
+.section-text {
+    font-size: 1.2rem;
+    color: #BDC3C7;
+    line-height: 1.8;
+}
+
+/* Specific section box colors */
+.about-section {
+    background-color: #34495E; /* Dark grey-blue */
+}
+
+.education-section {
+    background-color: #3E4A59; /* Slightly darker grey */
+}
+
+/* Key animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills section styling */
+.skills-section {
+    background-color: #2C3E50; /* Deep professional grey */
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+/* Skills list styling */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    color: #BDC3C7;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+/*conact
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Overall Page Settings */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #f5f5f5; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container (for both left and right sections) */
+.contact-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px 0;
+    gap: 30px;
+}
+
+/* Left Section: Information */
+.info-section {
+    flex: 1;
+    background-color: #1c1c1c; /* Slightly darker than the body for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0; /* Light text for readability */
+    text-align: left;
+}
+
+.info-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Right Section: Contact Form (Cutting-edge box design) */
+.form-section {
+    flex: 1;
+    background-color: #1c1c1c; /* Same as info-section to match the theme */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.form-section::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background-color: #4CAF50; /* Accent color */
+    transform: skew(-15deg);
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #444; /* Dark border */
+    border-radius: 5px;
+    background-color: #333; /* Dark background for input fields */
+    color: #f5f5f5; /* Light text */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #4CAF50;
+    background-color: #444; /* Darker background on focus */
+}
+
+button {
+    padding: 15px 25px;
+    background-color: #4CAF50; /* Green accent for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .contact-page {
+        flex-direction: column;
+    }
+
+    .form-section, .info-section {
+        width: 100%;
+    }
+}
+
+

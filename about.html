@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body { font-family: 'Roboto', sans-serif; background-color: #111; color: #fff; }
+        .card { 
+            background-color: #1a1a1a; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.3s, box-shadow 0.3s; 
+            padding: 1.5rem; /* Added padding for better spacing */
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.5); 
+        }
+        .card:active { 
+            transform: scale(0.98); 
+        }
+        .social-icon { transition: transform 0.3s ease; }
+        .social-icon:hover { transform: scale(1.2); }
+        .footer-link { transition: color 0.3s ease; }
+        .footer-link:hover { color: #007bff; }
+
+        /* Fade-In Animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Mobile-Specific Styles */
+        @media (max-width: 768px) {
+            .fade-in {
+                font-size: 1rem; /* Adjust font size for mobile */
+                line-height: 1.5; /* Improve line spacing */
+            }
+            .card {
+                padding: 1rem; /* Reduce padding for smaller screens */
+            }
+            h1 {
+                font-size: 2rem; /* Adjust heading size for mobile */
+            }
+            p {
+                font-size: 0.9rem; /* Adjust paragraph text size for mobile */
+            }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-black shadow-md py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <nav class="flex space-x-6 text-gray-400">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container mx-auto mt-10 px-6">
+        <div class="w-full">
+            <div class="card p-8 rounded-lg text-wrap">
+                <p class="text-blue-400">Security Researcher</p>
+                <h1 class="text-3xl font-bold mt-2">Sarthak Shirole</h1>
+                <p class="text-gray-300 mt-4">A cybersecurity researcher and AI security specialist, dedicated to building secure, intelligent systems. Passionate about protecting digital landscapes and pushing the boundaries of ethical hacking.</p>
+                <div class="mt-6 text-wrap">
+                    <p class="fade-in text-blue-400">
+                        "The strongest exploit is a weak mindset—stay ahead, stay secure."
+                    </p>
+                </div>
+                <button class="mt-6 px-6 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition duration-300">
+                    Let's Connect
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Who Am I and Education Section -->
+    <section class="container mx-auto mt-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Who Am I -->
+        <div class="card p-6 rounded-lg fade-in delay-1 text-wrap">
+            <h2 class="text-xl font-semibold text-blue-500">Who Am I</h2>
+            <p class="text-gray-400 mt-4">I break systems to secure them. A cybersecurity researcher, ethical hacker, and AI security specialist, I thrive in the shadows of the digital world—analyzing vulnerabilities, exploiting weaknesses, and fortifying defenses before real threats strike. From bypassing firewalls to preventing AI prompt injections, I weaponize knowledge to outsmart evolving threats. My mission? Stay ahead of the curve, hack before they do, and turn exploits into solutions. Security isn’t a product—it’s a mindset.</p>
+        </div>
+        <!-- Education -->
+        <div class="card p-6 rounded-lg fade-in delay-2 text-wrap">
+            <h2 class="text-xl font-semibold text-green-500">Education</h2>
+            <p class="text-gray-400 mt-4">High School Student | Cybersecurity & AI Enthusiast</p>
+            <p class="text-gray-400 mt-2">Certified Web Penetration Tester</p>
+            <p class="text-gray-400 mt-2">One of the Youngest LLM Prompt Security Engineers</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="container mx-auto mt-16 px-6">
+        <div class="card p-6 rounded-lg fade-in delay-3 text-wrap">
+            <h2 class="text-xl font-semibold text-red-500">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <div class="text-gray-400">
+                    <h3 class="font-semibold">Cybersecurity & AI Security</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Web Penetration Testing</li>
+                        <li>Bug Hunting (HackerOne, Private Programs)</li>
+                        <li>AI Model Security (Prompt Injection Prevention)</li>
+                        <li>Web Security Audits</li>
+                        <li>OSINT & Recon</li>
+                    </ul>
+                </div>
+                <div class="text-gray-400">
+                    <h3 class="font-semibold">Frontend Development & Learning</h3>
+                    <ul class="list-disc list-inside">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="text-gray-400">
+                    <h3 class="font-semibold">Automation, ML & Research</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Custom Security Tools & Scripts</li>
+                        <li>Python for Security Automation</li>
+                        <li>Machine Learning for Cybersecurity</li>
+                        <li>AI-driven Chatbots</li>
+                        <li>Vulnerability Detection Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="mt-16 bg-black py-6 text-center text-gray-500">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-6">
+                <a href="https://hackerone.com/s4th9k?type=user" class="footer-link"><i class="fas fa-user-secret social-icon"></i></a>
+                <a href="https://www.linkedin.com/in/sarthak-shirole-4646a6320/" class="footer-link"><i class="fab fa-linkedin social-icon"></i></a>
+                <a href="https://bugcrowd.com/S4T9A0" class="footer-link"><i class="fas fa-bug social-icon"></i></a>
+            </div>
+            <p class="mt-4">&copy; 2025 Sarthak Shirole | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

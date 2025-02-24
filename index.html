@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="text-white font-bold text-xl not-italic">S</i>
+                    <div class="logo-text">Sarthak Shirole</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="https://img.freepik.com/premium-photo/software-engineer-digital-avatar-generative-ai_934475-8997.jpg" 
+     alt="profile pic" 
+     width="200" 
+     height="200">
+
+                </div>
+                <div class="hero-text"> 
+                    <h5>Hi, I'm <span class="input">Security Researcher</span></h5>
+                    <h1>Sarthak Shirole</h1>
+                    <p>
+                        Hi, I’m Sarthak. I’m a certified Web Security Professional and a specialist in LLM security and AI model security. With a strong focus on safeguarding AI systems and developing secure, prompt-free interactions, I work to ensure robust protection against vulnerabilities and prompt injection risks. I provide comprehensive, detail-oriented solutions tailored to complex security challenges, combining my expertise in AI security and web vulnerabilities to deliver innovative, secure technologies.
+
+
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="https://calendly.com/securelink" class="btn active">Schedule a Meeting</a>
+                        <a href="contact.html" class="btn active">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://hackerone.com/s4th9k?type=user"><i class="fa-brands fa-hackerone"></i></a>
+                        <a href="https://hackerone.com/s4th9k?type=user" target="_blank" title="HackerOne Profile">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sarthak-shirole-4646a6320/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://bugcrowd.com/S4T9A0"><i class="fa-solid fa-bug"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typed.js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** Navbar Toggle **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function () {
+            nav.classList.toggle("open");
+        });
+
+        /** Typing Animation **/
+        var typed = new Typed(".input", {
+            strings: ["Cyber Security Expert", "Bug Hunter", "LLM/AI Security Engineer ,"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
